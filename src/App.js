@@ -1,15 +1,14 @@
 import "./App.css";
-import ComponentA from "./Components/ComponentA";
-import ComponentB from "./Components/ComponentB";
-import Sidebar from "./Components/Sidebar";
+
+import ComponentA from "./Components/ComponentA/ComponentA";
+import ComponentHeader from "./Components/ComponentHeader/ComponentHeader";
+
 
 function App() {
-  console.log("Hello Diyorbek");
   return (
     <>
-      <Sidebar />
+      <ComponentHeader />
       <ComponentA />
-      <ComponentB />
     </>
   );
 }

@@ -1,0 +1,98 @@
+.header {
+  height: 70px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.header .navbar {
+  background-color: #fff;
+}
+.header .navbar .top {
+  margin-bottom: 30px;
+  display: flex;
+  justify-content: end;
+}
+.header .navbar .top button {
+  border: 1px solid black;
+  padding: 5px 10px;
+  border-radius: 20px;
+  color: #fff;
+  margin: 5px;
+}
+.header .navbar .bottom {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.header .navbar .bottom h1 {
+  background-color: #fff;
+  border-radius: 20px;
+  width: 70%;
+  text-align: center;
+}
+.header .navbar button {
+  border: none;
+  padding: 5px 10px;
+  border-radius: 20px;
+  transition: all 0.5s linear;
+}
+.header .madal {
+  width: 9%;
+  background-color: #fff;
+  color: rgb(0, 255, 136);
+}
+
+.sidebar {
+  position: fixed;
+  z-index: 3;
+  top: 0;
+  left: -400px;
+  width: 400px;
+  height: 100vh;
+  background-color: red;
+  transition: all 0.5s linear;
+}
+
+.sidebar.open {
+  animation: close 2s ease-in-out 1;
+  transition: all 0.5s linear;
+}
+
+@keyframes close {
+  0% {
+    transform: rotate(0deg);
+    transform: skew(0deg, 0deg);
+  }
+  100% {
+    transform: rotate(180deg);
+    transform: skew(-50deg, 50deg);
+    opacity: 0;
+  }
+}
+.sidebar.on {
+  transition: all 0.5s linear;
+  left: 0;
+  animation: on 2s linear 1;
+}
+
+.sidebar.on + .nav {
+  opacity: 0;
+}
+
+@keyframes on {
+  0% {
+    transform: skew(0px, 0px);
+    transform: rotate(0deg);
+    opacity: 0;
+  }
+  50% {
+    transform: skew(20px, 20px);
+    transform: rotate(30deg);
+  }
+  100% {
+    transform: skew(40px, 50px);
+    transform: rotate(0deg);
+    opacity: 1;
+  }
+}/*# sourceMappingURL=ComponentHeader.css.map */

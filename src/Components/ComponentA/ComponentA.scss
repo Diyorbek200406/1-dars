@@ -1,0 +1,37 @@
+.parent {
+  transition: all 0.5s linear;
+  text-align: center;
+  button {
+    transition: all 0.5s linear;
+    padding: 2px 15px;
+    margin: 5px;
+    border-radius: 10px;
+    outline: none;
+    border: none;
+    background-color: blue;
+    color: white;
+  }
+}
+.parent.dark {
+  background-color: rgb(0, 0, 0);
+  color: blue;
+  button {
+    border-radius: 30px;
+    border: 1px solid rgb(22, 108, 22);
+    background-color: rgb(255, 182, 47);
+  }
+  button {
+    animation: mode 1.5s linear 1;
+  }
+  @keyframes mode {
+    0% {
+      transform: rotate(0);
+    }
+    50% {
+      transform: rotate(0);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+}

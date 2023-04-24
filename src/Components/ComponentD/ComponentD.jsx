@@ -4,7 +4,7 @@ import "./component.scss";
 const ComponentD = () => {
 
 
-    
+
   return (
     <>
       <form className="form form-control">
@@ -35,14 +35,14 @@ const ComponentD = () => {
         </div>
       </form>
       <div className="about">
-        <div className="div div-1"></div>
+        <div className="div div-1">k</div>
         <div className="div div-2">2</div>
         <div className="div div-3">a</div>
-        <div className="div div-4"></div>
+        <div className="div div-4">g</div>
         <div className="div div-5">vaer</div>
       </div>
     </>
   );
 };
 
-export default ComponentD;
+export default ComponentD

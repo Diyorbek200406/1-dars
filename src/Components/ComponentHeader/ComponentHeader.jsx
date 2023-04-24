@@ -40,7 +40,7 @@ const ComponentHeader = (count) => {
             </div>
           </div>
           <button className="nav btn btn-info" onClick={handleSidebar}>
-            Navbar
+            <h2>React User Application</h2>
           </button>
         </div>
 

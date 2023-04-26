@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import "./ComponentModal.scss";
-const ComponentModal = () => {
+
+const ComponentModal = (i) => {
   const [modal, setModal] = useState(false);
   const handleModal = () => {
     setModal(true);
@@ -8,12 +9,13 @@ const ComponentModal = () => {
   const handleModalClose = () => {
     setModal(false);
   };
+
   return (
     <div>
       <div className={modal ? "modale on" : "modale no"}>
         <form className="form form-control">
           <input className="form-control" type="text" placeholder="Typing..." />
-          <button type="button" className="btn-primary btn form-control">
+          <button type="submit" className="btn-primary btn form-control">
             Submit
           </button>
           <button
@@ -26,8 +28,8 @@ const ComponentModal = () => {
         </form>
       </div>
       <div className="modals">
-        <button className="btn btn-success" onClick={handleModal}>
-          Modals
+        <button id={i.i} className="btn w-100" onClick={handleModal}>
+          Edit
         </button>
       </div>
     </div>

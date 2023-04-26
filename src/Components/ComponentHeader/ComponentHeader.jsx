@@ -29,14 +29,11 @@ const ComponentHeader = (count) => {
               </button>
             </div>
             <div className="bottom">
-              <h1>Hello</h1>
-              <h1>Hello</h1>
-              <h1>Hello</h1>
-              <h1>Hello</h1>
-              <h1>Hello</h1>
-              <h1>Hello</h1>
-              <h1>Hello</h1>
-              <h1>Hello</h1>
+              <h1>name</h1>
+              <h1>lastName</h1>
+              <h1>age</h1>
+              <h1>job</h1>
+              <h1>salary</h1>
             </div>
           </div>
           <button className="nav btn btn-info" onClick={handleSidebar}>

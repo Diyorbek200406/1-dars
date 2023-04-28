@@ -40,7 +40,7 @@ const CompE = () => {
   }, [resourceType]);
 
   return (
-    <div>
+    <div className="py-5">
       <button
         className="btn btn-info m-3"
         onClick={() => setResourseType("all")}
@@ -65,8 +65,8 @@ const CompE = () => {
       >
         Change2
       </button>
-      <h1 className="title text-bg-info">{resourceType}</h1>
-      <h1 className="title text-bg-info">{resourceType2}</h1>
+      <h1 className="title text-bg-info">Country Name : {resourceType}</h1>
+      <h1 className="text-bg-info">{resourceType2}</h1>
       <div className="cards">
         {data.map((item) => (
           <div key={item.name.common} className="card">
@@ -75,10 +75,16 @@ const CompE = () => {
               src={item.flags.svg}
               alt={item.flags.alt}
             />
-            <h3 key={item.name.common}>{item.name.common}</h3>
-            <p>{item.capital}</p>
-            <p>{item.population}</p>
-            <p>{item.region}</p>
+            <h3>{item.name.common}</h3>
+            <p>
+              Capital : <span>{item.capital}</span>
+            </p>
+            <p>
+              Population : <span>{item.population}</span>
+            </p>
+            <p>
+              Region : <span>{item.region}</span>
+            </p>
             <button
               onClick={() => {
                 setResourseType(item.name.common);

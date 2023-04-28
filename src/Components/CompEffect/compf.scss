@@ -1,15 +1,33 @@
 .cards {
+  position: relative;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 20px;
   padding: 20px 50px;
   .card {
-    text-align: center;
+    padding: 10px;
     img {
       max-width: 100%;
       height: auto;
       display: block;
       height: 200px;
     }
+    p {
+      color: #000;
+      font-size: 20px;
+      font-weight: 600;
+    }
+    span {
+      color: rgba (0, 0, 0, 0.7);
+      font-weight: 300;
+    }
   }
+}
+
+.title {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
 }

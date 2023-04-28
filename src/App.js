@@ -1,11 +1,10 @@
 import "./App.css";
-
-import ComponentF from "./Components/ComponentF/ComponentF";
+import CompE from "./Components/CompEffect/CompE";
 
 function App() {
   return (
     <>
-      <ComponentF />
+      <CompE />
     </>
   );
 }

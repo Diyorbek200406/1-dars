@@ -1,14 +1,11 @@
 import "./App.css";
 
-import ComponentA from "./Components/ComponentA/ComponentA";
-import ComponentHeader from "./Components/ComponentHeader/ComponentHeader";
-
+import ComponentF from "./Components/ComponentF/ComponentF";
 
 function App() {
   return (
     <>
-      <ComponentHeader />
-      <ComponentA />
+      <ComponentF />
     </>
   );
 }

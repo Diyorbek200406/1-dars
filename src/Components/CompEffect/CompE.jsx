@@ -41,32 +41,8 @@ const CompE = () => {
 
   return (
     <div>
-      <button
-        className="btn btn-info m-3"
-        onClick={() => setResourseType("all")}
-      >
-        All
-      </button>
-      <button
-        className="btn btn-info m-3"
-        onClick={() => setResourseType("users")}
-      >
-        Users
-      </button>
-      <button
-        className="btn btn-info m-3"
-        onClick={() => setResourseType("comments")}
-      >
-        Comments
-      </button>
-      <button
-        className="btn btn-info m-3"
-        onClick={() => setResourseType2("change2")}
-      >
-        Change2
-      </button>
-      <h1 className="title text-bg-info">{resourceType}</h1>
-      <h1 className="title text-bg-info">{resourceType2}</h1>
+      <h1 className="title">{resourceType}</h1>
+
       <div className="cards">
         {data.map((item) => (
           <div key={item.name.common} className="card">
@@ -79,15 +55,17 @@ const CompE = () => {
             <p>{item.capital}</p>
             <p>{item.population}</p>
             <p>{item.region}</p>
-            <button
+            <div
               onClick={() => {
                 setResourseType(item.name.common);
                 Others();
               }}
+              class="container"
             >
-              Others
-            </button>
-            {/* <p>{console.log(item)}</p> */}
+              <a className="a" href="#">
+                <span>Button</span>
+              </a>
+            </div>
           </div>
         ))}
       </div>

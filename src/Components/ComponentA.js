@@ -3,6 +3,7 @@ function ComponentA() {
     <div>
       <h1>ComponentA</h1>
       <p>Hello World A !</p>
+      <p>Hello World A !</p>
     </div>
   );
 }

@@ -1,6 +1,6 @@
-import ComponentModal from "../ComponentModal/ComponentModal";
 import "./ComponentHeader.scss";
 import { useState } from "react";
+import { Link, NavLink } from "react-router-dom";
 const ComponentHeader = (count) => {
   const [sidebar, setSidebar] = useState(true);
 
@@ -14,6 +14,9 @@ const ComponentHeader = (count) => {
   return (
     <div className="container">
       <div className="header">
+        <button className="nav btn btn-info" onClick={handleSidebar}>
+          Navbar
+        </button>
         <div className="navbar">
           <div
             className={
@@ -29,24 +32,23 @@ const ComponentHeader = (count) => {
               </button>
             </div>
             <div className="bottom">
-              <h1>Hello</h1>
-              <h1>Hello</h1>
-              <h1>Hello</h1>
-              <h1>Hello</h1>
-              <h1>Hello</h1>
-              <h1>Hello</h1>
-              <h1>Hello</h1>
-              <h1>Hello</h1>
+              <h1>Hello World</h1>
             </div>
           </div>
-          <button className="nav btn btn-info" onClick={handleSidebar}>
-            Navbar
-          </button>
         </div>
 
+        <div className="search">
+          <input type="search" />
+        </div>
+        <div className="link">
+          <NavLink to="/">Home</NavLink>
+          <NavLink to="/about">About us</NavLink>
+          <NavLink to="/error404">Error 404</NavLink>
+        </div>
+        {/*
         <div className="madal">
           <ComponentModal count={count} />
-        </div>
+        </div> */}
       </div>
     </div>
   );

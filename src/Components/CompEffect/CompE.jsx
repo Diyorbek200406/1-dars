@@ -1,9 +1,10 @@
 import { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 import "./compf.scss";
 import axios from "axios";
 const CompE = () => {
-  const [resourceType, setResourseType] = useState("");
-  const [resourceType2, setResourseType2] = useState("posts2");
+  const [resourceType, setResourseType] = useState("Barbados");
+  // const [resourceType2, setResourseType2] = useState("posts2");
   const [data, setData] = useState([]);
   const [dataOther, setDataOther] = useState([]);
 
@@ -41,8 +42,6 @@ const CompE = () => {
 
   return (
     <div>
-      <h1 className="title">{resourceType}</h1>
-
       <div className="cards">
         {data.map((item) => (
           <div key={item.name.common} className="card">
@@ -60,11 +59,13 @@ const CompE = () => {
                 setResourseType(item.name.common);
                 Others();
               }}
-              class="container"
+              className="container"
             >
-              <a className="a" href="#">
-                <span>Button</span>
-              </a>
+              <span>
+                <Link className="py-1" to={`name/${item.name.common}`}>
+                  Read More
+                </Link>
+              </span>
             </div>
           </div>
         ))}

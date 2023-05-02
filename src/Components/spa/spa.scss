@@ -1,0 +1,32 @@
+.spa {
+  padding: 100px 50px;
+  max-height: 100vh;
+  display: flex;
+  .left {
+    width: 50%;
+    padding: 50px;
+    padding-top: 80px;
+    img {
+      height: 100%;
+    }
+  }
+  .right {
+    width: 50%;
+    padding: 50px;
+    span {
+      font-size: 24px;
+      opacity: 0.9;
+      color: #0000ffda;
+    }
+    h3{
+      padding: 8px;
+    }
+  }
+}
+.flag {
+  max-width: 100%;
+}
+.homepage {
+  text-decoration: none;
+  background-color: #fff;
+}

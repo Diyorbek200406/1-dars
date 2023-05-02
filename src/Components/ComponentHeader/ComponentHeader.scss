@@ -1,8 +1,20 @@
 .header {
   height: 70px;
   display: flex;
-  justify-content: space-between;
   align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  gap: 100px;
+  z-index: 1000;
+  background-color: #eee;
+  .nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+  }
   .navbar {
     background-color: #fff;
 
@@ -16,6 +28,7 @@
         border-radius: 20px;
         color: #fff;
         margin: 5px;
+        text-align: center;
       }
     }
 
@@ -36,6 +49,7 @@
       padding: 5px 10px;
       border-radius: 20px;
       transition: all 0.5s linear;
+      text-align: center;
     }
   }
   .madal {
@@ -92,5 +106,20 @@
     transform: skew(40px, 50px);
     transform: rotate(0deg);
     opacity: 1;
+  }
+}
+.link {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  a {
+    padding: 10px;
+    border: 1px solid white;
+    text-decoration: none;
+    border-radius: 20px;
+  }
+  .active {
+    color: black;
   }
 }

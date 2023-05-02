@@ -2,14 +2,110 @@
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 20px;
-  padding: 20px 50px;
+  padding: 100px 50px;
   position: relative;
+  .a {
+    --clr: #00ccff;
+    --i: 1;
+  }
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Courier New", Courier, monospace;
+  }
+
+  .container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 100%;
+    background: transparent;
+  }
+
+  a {
+    position: relative;
+    padding: 2px 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.5);
+    margin: 5px;
+    transition: 1s;
+    overflow: hidden;
+    text-decoration: none;
+    border-radius: 20px;
+  }
+
+  a:hover {
+    background: var(--clr);
+    box-shadow: 0 0 10px var(--clr), 0 0 30px var(--clr), 0 0 60px var(--clr),
+      0 0 100px var(--clr);
+  }
+
+  a::before {
+    content: "";
+    position: absolute;
+    width: 40px;
+    height: 400%;
+    background: var(--clr);
+    transition: 1s;
+    animation: animate 2s linear infinite;
+    animation-delay: calc(0.33s * var(--i));
+  }
+
+  a:hover::before {
+    width: 120%;
+  }
+
+  @keyframes animate {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+
+  a::after {
+    content: "";
+    position: absolute;
+    background: #0e1538;
+    inset: 4px;
+    transition: 0.5s;
+    border-radius: 20px;
+  }
+
+  a:hover::after {
+    border-radius: 20px;
+    background: var(--clr);
+  }
+
+  a span {
+    position: relative;
+    z-index: 1;
+    font-size: 1.5em;
+    color: #fff;
+    opacity: 0.8;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    transition: 0.5s;
+    border-radius: 20px;
+  }
+
+  a:hover span {
+    border-radius: 20px;
+    opacity: 1;
+    color: #0e1538;
+  }
 
   .card {
     text-align: center;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    padding: 10px;
     img {
       max-width: 100%;
       height: auto;
@@ -27,99 +123,4 @@
   text-align: center;
   color: white;
   background: linear-gradient(to right, red, blue);
-}
-.a {
-  --clr: #00ccff;
-  --i: 1;
-}
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: "Courier New", Courier, monospace;
-}
-
-.container {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  flex-wrap: wrap;
-  width: 100%;
-  background: transparent;
-}
-
-a {
-  position: relative;
-  padding: 2px 10px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background: rgba(0, 0, 0, 0.5);
-  margin: 5px;
-  transition: 1s;
-  overflow: hidden;
-  text-decoration: none;
-  border-radius: 20px;
-}
-
-a:hover {
-  background: var(--clr);
-  box-shadow: 0 0 10px var(--clr), 0 0 30px var(--clr), 0 0 60px var(--clr),
-    0 0 100px var(--clr);
-}
-
-a::before {
-  content: "";
-  position: absolute;
-  width: 40px;
-  height: 400%;
-  background: var(--clr);
-  transition: 1s;
-  animation: animate 2s linear infinite;
-  animation-delay: calc(0.33s * var(--i));
-}
-
-a:hover::before {
-  width: 120%;
-}
-
-@keyframes animate {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
-}
-
-a::after {
-  content: "";
-  position: absolute;
-  background: #0e1538;
-  inset: 4px;
-  transition: 0.5s;
-  border-radius: 20px;
-}
-
-a:hover::after {
-  border-radius: 20px;
-  background: var(--clr);
-}
-
-a span {
-  position: relative;
-  z-index: 1;
-  font-size: 1.5em;
-  color: #fff;
-  opacity: 0.8;
-  text-transform: uppercase;
-  letter-spacing: 4px;
-  transition: 0.5s;
-  border-radius: 20px;
-}
-
-a:hover span {
-  border-radius: 20px;
-  opacity: 1;
-  color: #0e1538;
 }

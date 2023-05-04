@@ -42,6 +42,7 @@ const CompE = () => {
 
   return (
     <div>
+      {console.log(data[0])}
       <div className="cards">
         {data.map((item) => (
           <div key={item.name.common} className="card">
@@ -52,8 +53,8 @@ const CompE = () => {
             />
             <h3 key={item.name.common}>{item.name.common}</h3>
             <p>{item.capital}</p>
-            <p>{item.population}</p>
-            <p>{item.region}</p>
+            <p>Population : {item.population}</p>
+            <p>Region : {item.region}</p>
             <div
               onClick={() => {
                 setResourseType(item.name.common);

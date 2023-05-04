@@ -30,7 +30,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    background: rgba(0, 0, 0, 0.5);
+    background: rgba(0, 255, 68, 0.5);
     margin: 5px;
     transition: 1s;
     overflow: hidden;
@@ -71,7 +71,7 @@
   a::after {
     content: "";
     position: absolute;
-    background: #0e1538;
+    background: #000000;
     inset: 4px;
     transition: 0.5s;
     border-radius: 20px;

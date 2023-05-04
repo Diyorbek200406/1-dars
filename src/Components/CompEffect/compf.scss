@@ -71,7 +71,7 @@
   a::after {
     content: "";
     position: absolute;
-    background: #000000;
+    background: #00000023;
     inset: 4px;
     transition: 0.5s;
     border-radius: 20px;
@@ -97,7 +97,7 @@
   a:hover span {
     border-radius: 20px;
     opacity: 1;
-    color: #0e1538;
+    color: #0e3812;
   }
 
   .card {
@@ -123,4 +123,7 @@
   text-align: center;
   color: white;
   background: linear-gradient(to right, red, blue);
+}
+.input {
+  width: 60%;
 }

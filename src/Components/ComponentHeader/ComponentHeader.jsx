@@ -37,9 +37,7 @@ const ComponentHeader = (count) => {
           </div>
         </div>
 
-        <div className="search">
-          <input type="search" />
-        </div>
+        <div className="search"></div>
         <div className="link">
           <NavLink to="/">Home</NavLink>
           <NavLink to="/about">About us</NavLink>

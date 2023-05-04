@@ -18,6 +18,7 @@ function App() {
           <Route element={<Navigate to="/error404" />} path="*" />
           <Route element={<Spa />} path="name/:id" />
         </Routes>
+
         <Footer />
       </BrowserRouter>
     </>

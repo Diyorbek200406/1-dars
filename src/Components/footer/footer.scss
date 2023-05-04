@@ -7,4 +7,9 @@
   background-color: rgba(68, 85, 51, 0.792);
   color: white;
   text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  user-select: none;
 }

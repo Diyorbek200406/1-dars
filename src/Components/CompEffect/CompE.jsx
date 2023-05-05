@@ -7,11 +7,13 @@ const CompE = () => {
   const [data, setData] = useState([]);
   const [dataOther, setDataOther] = useState([]);
   const [search, setSearch] = useState("");
+  const [loader, setLoader] = useState(false);
 
   const getData = async () => {
     try {
       const response = await axios.get(`https://restcountries.com/v3.1/all`);
       setData(response.data);
+      setLoader(false);
     } catch (error) {
       console.log(error);
     }
@@ -36,9 +38,10 @@ const CompE = () => {
     );
   };
   useEffect(() => {
+    setLoader(true);
     getData();
     getDataOther();
-  }, [resourceType]);
+  },[]);
 
   const myData = data
     .filter((data) => {
@@ -74,6 +77,21 @@ const CompE = () => {
         </div>
       </div>
     ));
+
+  if (loader) {
+    return (
+      <div class="lds-roller">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+    );
+  }
 
   return (
     <div>
